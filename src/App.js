@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Este es mi reto microsip
+          Rama de Victor
         </p>
         <a
           className="App-link"
