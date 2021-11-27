@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reto-microsip/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/reto-microsip/static/js/main.6d4b93ad.chunk.js",
+    "main.js.map": "/reto-microsip/static/js/main.6d4b93ad.chunk.js.map",
+    "runtime-main.js": "/reto-microsip/static/js/runtime-main.18ed4396.js",
+    "runtime-main.js.map": "/reto-microsip/static/js/runtime-main.18ed4396.js.map",
+    "static/js/2.91492f01.chunk.js": "/reto-microsip/static/js/2.91492f01.chunk.js",
+    "static/js/2.91492f01.chunk.js.map": "/reto-microsip/static/js/2.91492f01.chunk.js.map",
+    "static/js/3.4713a39c.chunk.js": "/reto-microsip/static/js/3.4713a39c.chunk.js",
+    "static/js/3.4713a39c.chunk.js.map": "/reto-microsip/static/js/3.4713a39c.chunk.js.map",
+    "index.html": "/reto-microsip/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/reto-microsip/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.91492f01.chunk.js.LICENSE.txt": "/reto-microsip/static/js/2.91492f01.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/reto-microsip/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18ed4396.js",
+    "static/js/2.91492f01.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.6d4b93ad.chunk.js"
+  ]
+}
