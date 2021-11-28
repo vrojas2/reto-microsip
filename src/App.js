@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import './styles/styles.scss';
+// import logo from './logo.svg';
+// import './App.css';
+// import './styles/styles.scss';
+// import './components/CRUD'
+
+import { CRUD } from "./components/CRUD";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Rama de Victor
@@ -18,7 +21,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <CRUD/>
     </div>
   );
 }
