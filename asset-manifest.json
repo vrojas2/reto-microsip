@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reto-microsip/static/css/main.c0f33824.chunk.css",
-    "main.js": "/reto-microsip/static/js/main.b410fb73.chunk.js",
-    "main.js.map": "/reto-microsip/static/js/main.b410fb73.chunk.js.map",
+    "main.js": "/reto-microsip/static/js/main.7d39f75a.chunk.js",
+    "main.js.map": "/reto-microsip/static/js/main.7d39f75a.chunk.js.map",
     "runtime-main.js": "/reto-microsip/static/js/runtime-main.9c1022f5.js",
     "runtime-main.js.map": "/reto-microsip/static/js/runtime-main.9c1022f5.js.map",
     "static/css/2.383c0125.chunk.css": "/reto-microsip/static/css/2.383c0125.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.bcf18b1a.chunk.js",
     "static/css/main.c0f33824.chunk.css",
-    "static/js/main.b410fb73.chunk.js"
+    "static/js/main.7d39f75a.chunk.js"
   ]
 }
