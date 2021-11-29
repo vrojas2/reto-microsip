@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
+import { UpdateByCosto } from './UpdateByCosto';
+import { UpdateByPrecio } from './UpdateByPrecio';
 
-import { ByCosto } from './ByCosto';
-import { ByPrecio } from './ByPrecio';
-
-export const Insert = (props) => {
-    const { data, setModalInsertar, modalInsertar, setData } = props;
+export const Update = (props) => {
+    const {
+        setModalEditar,
+        modalEditar,
+        articuloSelect,
+        data,
+        setData,
+        setArticuloSelect
+    } = props;
 
     const [indicator, setIndicator] = useState(0);
 
     return (
-        <Modal isOpen={modalInsertar}>
+        <Modal isOpen={modalEditar}>
             <ModalHeader>
                 <div>
-                    <h3>Agregar un artículo</h3>
+                    <h3>Editar Articulo "<b></b>"</h3>
                 </div>
             </ModalHeader>
             <ModalBody>
-                <div className="btnsInsert">
+            <div className="btnsInsert">
                     <button
                         className="btn btn-primary"
                         variant="primary"
@@ -25,7 +31,7 @@ export const Insert = (props) => {
                             setIndicator(1);
                         }}
                     >
-                        Agregar por Costo
+                        Editar por Costo
                     </button>
                     <button
                         className="btn btn-primary"
@@ -34,22 +40,26 @@ export const Insert = (props) => {
                             setIndicator(2);
                         }}
                     >
-                        Agregar por Precio
+                        Editar por Precio
                     </button>
                 </div>
 
                 {indicator === 1 ? (
-                    <ByCosto
-                        data={data}
-                        setModalInsertar={setModalInsertar}
-                        setData={setData}
+                    <UpdateByCosto
+                        articuloSelect = {articuloSelect}
+                        setArticuloSelect = {setArticuloSelect}
+                        data = {data}
+                        setData = {setData}
+                        setModalEditar = {setModalEditar}
                     />
                 ) : null}
                 {indicator === 2 ? (
-                    <ByPrecio
-                        data={data}
-                        setModalInsertar={setModalInsertar}
-                        setData={setData}
+                    <UpdateByPrecio
+                        articuloSelect = {articuloSelect}
+                        setArticuloSelect = {setArticuloSelect}
+                        data = {data}
+                        setData = {setData}
+                        setModalEditar = {setModalEditar}
                     />
                 ) : null}
 
@@ -57,7 +67,7 @@ export const Insert = (props) => {
             <ModalFooter>
                 <button
                     className="btn btn-danger"
-                    onClick={() => setModalInsertar(false)}
+                    onClick={() => setModalEditar(false)}
                 >
                     Cancelar
                 </button>

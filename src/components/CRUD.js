@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-// import { Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Insert } from './create/Insert';
 import { Delet } from './delet/Delet';
+import { Update } from './update/Update';
 
 export const CRUD = () => {
 
@@ -32,8 +32,8 @@ export const CRUD = () => {
         setModalInsertar(true);
     }
 
-    const seleccionArticulo = (elemento, caso) => {
-        setArticuloSelect(elemento);
+    const seleccionArticulo = (articulo, caso) => {
+        setArticuloSelect(articulo);
         (caso === 'Editar') ? setModalEditar(true) : setModalEliminar(true)
     }
 
@@ -61,25 +61,23 @@ export const CRUD = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.map(elemento => (
+                            {data.map(articulo => (
                                 <tr>
-                                    <td>{elemento.id}</td>
-                                    <td>{elemento.nombre}</td>
-                                    <td>{elemento.costo}</td>
-                                    <td>{elemento.iva}</td>
-                                    <td>{elemento.precio}</td>
+                                    <td>{articulo.id}</td>
+                                    <td>{articulo.nombre}</td>
+                                    <td>{articulo.costo}</td>
+                                    <td>{articulo.iva}</td>
+                                    <td>{articulo.precio}</td>
                                     <td className="optionBtns">
                                         <button className="btn btn-primary"
-                                        // onClick={() => editArticulo(elemento, 'Editar')}
+                                            onClick={() => seleccionArticulo(articulo, 'Editar')}
                                         >
-                                            {/* Editar {"   "} */}
                                             <EditIcon
                                                 fontSize="small"
                                             />
                                         </button>
-                                        {/* {"   "} */}
                                         <button className="btn btn-danger"
-                                            onClick={() => seleccionArticulo(elemento, 'Eliminar')}
+                                            onClick={() => seleccionArticulo(articulo, 'Eliminar')}
                                         >
                                             <DeleteIcon />
                                         </button>
@@ -102,6 +100,15 @@ export const CRUD = () => {
                         modalEliminar = {modalEliminar}
                         data = {data}
                         setData = {setData}
+                    />
+
+                    <Update
+                        articuloSelect = {articuloSelect}
+                        setModalEditar = {setModalEditar}
+                        modalEditar = {modalEditar}
+                        data = {data}
+                        setData = {setData}
+                        setArticuloSelect = {setArticuloSelect}
                     />
                 </div>
             </div>
