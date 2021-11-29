@@ -82,7 +82,7 @@ export const UpdateByPrecio = (props) => {
         <div>
             <hr />
             <div>
-                <h5 className="text-center mt-4">Agregar por costo</h5>
+                <h5 className="text-center mt-4">Editar por costo</h5>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label>ID</label>

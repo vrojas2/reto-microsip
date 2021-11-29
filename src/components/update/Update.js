@@ -19,7 +19,7 @@ export const Update = (props) => {
         <Modal isOpen={modalEditar}>
             <ModalHeader>
                 <div>
-                    <h3>Editar Articulo "<b></b>"</h3>
+                    <h3>Editar Articulo "<b>{articuloSelect.nombre}</b>"</h3>
                 </div>
             </ModalHeader>
             <ModalBody>
