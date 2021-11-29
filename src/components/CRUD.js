@@ -39,9 +39,12 @@ export const CRUD = () => {
 
     return (
         <div>
-            <h3>
-                Control de artículos
-            </h3>
+            <div className="title">
+                <h2 className="text-center">
+                    Control de artículos
+                </h2>
+            </div>
+            
             <div className="container mt-4">
                 <div className="">
                     <button className="btn btn-success"
