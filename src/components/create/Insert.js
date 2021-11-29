@@ -18,39 +18,43 @@ export const Insert = (props) => {
                 </div>
             </ModalHeader>
             <ModalBody>
-                <button
-                    variant="primary"
-                    onClick={() => {
-                        setIndicator(1);
-                        // setModalIndicator(2);
-                    }}
-                >
-                    Agregar por Costo
-                </button>
-                <button
-                    variant="primary"
-                    onClick={() => {
-                        setIndicator(2);
-                    }}
-                >
-                    Agregar por Precio
-                </button>
+                <div className="btnsInsert">
+                    <button
+                        className="btn btn-primary"
+                        variant="primary"
+                        onClick={() => {
+                            setIndicator(1);
+                        }}
+                    >
+                        Agregar por Costo
+                    </button>
+                    <button
+                        className="btn btn-primary"
+                        variant="primary"
+                        onClick={() => {
+                            setIndicator(2);
+                        }}
+                    >
+                        Agregar por Precio
+                    </button>
+                </div>
+
 
                 {indicator === 1 ? (
                     <ByCosto
                         data={data}
                         setModalInsertar={setModalInsertar}
-                        setData = {setData}
+                        setData={setData}
                     />
                 ) : null}
                 {indicator === 2 ? (
                     <ByPrecio
-                        data = {data}
-                        setModalInsertar = {setModalInsertar}
-                        setData = {setData}
+                        data={data}
+                        setModalInsertar={setModalInsertar}
+                        setData={setData}
                     />
                 ) : null}
-                
+
             </ModalBody>
             <ModalFooter>
                 <button

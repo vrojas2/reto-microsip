@@ -4,7 +4,8 @@ import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Insert } from './Insert';
+import { Insert } from './create/Insert';
+import { Delet } from './delet/Delet';
 
 export const CRUD = () => {
 
@@ -15,10 +16,11 @@ export const CRUD = () => {
     ];
 
     const [data, setData] = useState(dataArticulos);
-    const [modalEditar, setModalEditar] = useState(false);
     const [modalInsertar, setModalInsertar] = useState(false);
+    const [modalEliminar, setModalEliminar] = useState(false);
+    const [modalEditar, setModalEditar] = useState(false);
 
-    const [articuloEdit, setArticuloEdit] = useState({
+    const [articuloSelect, setArticuloSelect] = useState({
         id: '',
         nombre: '',
         costo: '',
@@ -30,9 +32,9 @@ export const CRUD = () => {
         setModalInsertar(true);
     }
 
-    const editArticulo = (elemento, caso) => {
-        setArticuloEdit(elemento);
-        // (caso === 'Editar') ? setModalEditar(true) : setModalEliminar(true)
+    const seleccionArticulo = (elemento, caso) => {
+        setArticuloSelect(elemento);
+        (caso === 'Editar') ? setModalEditar(true) : setModalEliminar(true)
     }
 
     return (
@@ -44,7 +46,7 @@ export const CRUD = () => {
                 <div className="">
                     <button className="btn btn-success"
                         onClick={() => abrirModalInsertar()}
-                    >Agregar <AddIcon/></button>
+                    >Agregar <AddIcon /></button>
                 </div>
                 <div className="table-responsive mt-3">
                     <table className="table text-center">
@@ -77,21 +79,28 @@ export const CRUD = () => {
                                         </button>
                                         {/* {"   "} */}
                                         <button className="btn btn-danger"
-                                        // onClick={() => seleccionarPais(elemento, 'Eliminar')}
+                                            onClick={() => seleccionArticulo(elemento, 'Eliminar')}
                                         >
                                             <DeleteIcon />
                                         </button>
                                     </td>
                                 </tr>
-                            ))
-                            }
+                            ))}
                         </tbody>
                     </table>
-                        
+
                     <Insert
-                        setModalInsertar = {setModalInsertar}
+                        setModalInsertar={setModalInsertar}
+                        data={data}
+                        modalInsertar={modalInsertar}
+                        setData={setData}
+                    />
+
+                    <Delet
+                        articuloSelect = {articuloSelect}
+                        setModalEliminar = {setModalEliminar}
+                        modalEliminar = {modalEliminar}
                         data = {data}
-                        modalInsertar = {modalInsertar}
                         setData = {setData}
                     />
                 </div>
